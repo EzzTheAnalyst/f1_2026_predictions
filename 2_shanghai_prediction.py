@@ -23,6 +23,7 @@ Reasoning:
 
 """
 
+# adding the timings from SQ and Sprint
 fp_sessions = {}
 for session_name in ["FP1", "SQ" ,"S", "Q"]:
     session = fastf1.get_session(2026, "China", session_name)
