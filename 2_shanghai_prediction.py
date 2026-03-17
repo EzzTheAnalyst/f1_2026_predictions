@@ -23,7 +23,6 @@ Reasoning:
 
 """
 
-# adding the timings from SQ and Sprint
 fp_sessions = {}
 for session_name in ["FP1", "SQ" ,"S", "Q"]:
     session = fastf1.get_session(2026, "China", session_name)
@@ -87,7 +86,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_imputed, y, test_size=0.2,
 
 
 # train XGBoost model
-model = XGBRegressor(n_estimators=100, learning_rate=0.9, max_depth=3, random_state=42)
+model = XGBRegressor(n_estimators=100, learning_rate=0.7, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 merged_data["PredictedRacetime (s)"] = model.predict(X_imputed)
 
@@ -112,8 +111,8 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 🏁 Shanghai Race Prediction🏁
 
 🏆 Predicted in the top 3 🏆
-🥇 P1: RUS
-🥈 P2: ANT
+🥇 P1: ANT
+🥈 P2: RUS
 🥉 P3: HAM
-Model Error (MAE) : 0.15 seconds
+Model Error (MAE) : 0.08 seconds
 """
