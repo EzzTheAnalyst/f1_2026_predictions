@@ -5,7 +5,7 @@
 Welcome to the **F1 Predictions 2026** repository! This project uses **machine learning, and FastF1 API data** to predict race outcomes for the 2026 Formula 1 season.
 
 ## 🚀 Project Overview
-This repository contains a **XGBoosting Machine Learning model** that predicts race results based on free practice performance, sprints if it belongs in the race weekend, and qualifying times. The model leverages:
+This repository contains an **XGBoost machine learning model** that predicts race results based on free practice performances, sprint results (when the weekend includes a sprint), and qualifying times. The model leverages:
 - FastF1 API for free practice race data
 - 2026 qualifying session results
 - Feature engineering techniques to improve predictions
