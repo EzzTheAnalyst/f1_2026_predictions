@@ -108,6 +108,13 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 
 """
+   Driver  PredictedRacetime (s)
+0     ANT              92.913116
+1     RUS              92.913116
+2     HAM              93.407532
+3     LEC              93.407532
+4     PIA              93.407532
+
 🏁 Shanghai Race Prediction🏁
 
 🏆 Predicted in the top 3 🏆
