@@ -22,7 +22,7 @@ Reasoning:
 """
 
 fp_sessions = {}
-for session_name in ["FP1", "FP2", "FP3"]:
+for session_name in ["FP1", "FP2", "FP3", "Q"]:
     session = fastf1.get_session(2026, "Australia", session_name)
     session.load()
 
@@ -73,7 +73,7 @@ y = merged_data[["fp_mean_best_lap"]]
 
 
 # impute missing values for features
-imputer = SimpleImputer(strategy="mean")
+imputer = SimpleImputer(strategy="median")
 X_imputed = imputer.fit_transform(X)
 
 
@@ -82,7 +82,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_imputed, y, test_size=0.2,
 
 
 # train XGBoost model
-model = XGBRegressor(n_estimators=100, learning_rate=0.9, max_depth=3, random_state=42)
+model = XGBRegressor(n_estimators=100, learning_rate=0.7, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 merged_data["PredictedRacetime (s)"] = model.predict(X_imputed)
 
@@ -110,5 +110,5 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 🥇 P1: LEC
 🥈 P2: HAM
 🥉 P3: RUS
-Model Error (MAE) : 0.26 seconds
+Model Error (MAE) : 0.15 seconds
 """
