@@ -9,9 +9,9 @@ This repository contains an **XGBoost machine learning model** that predicts rac
 - FastF1 API for free practice race data
 - 2026 qualifying session results
 - Feature engineering techniques to improve predictions
-
 PS.: Over the season, I'll be adding additional features to improve our model as well
 
+## Do the predictions work well? Let's see
 | Race       | Podium Predicted          | Actual              | Result                          |
 |------------|---------------------------|---------------------|---------------------------------|
 | R1 Australia | 1.LEC/2.HAM/3.RUS       | 1.RUS/2.ANT/3.LEC  | 2 drivers had podium in different positions |
