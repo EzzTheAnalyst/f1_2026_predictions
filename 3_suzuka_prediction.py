@@ -72,7 +72,7 @@ y = merged_data[["fp_mean_best_lap"]]
 
 
 # impute missing values for features
-imputer = SimpleImputer(strategy="median")
+imputer = SimpleImputer(strategy="mean")
 X_imputed = imputer.fit_transform(X)
 
 
@@ -103,7 +103,7 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 
 """
-🏁 Suzka Race Prediction🏁
+🏁 Suzuka Race Prediction🏁
 
 🏆 Predicted in the top 3 🏆
 🥇 P1: ANT
