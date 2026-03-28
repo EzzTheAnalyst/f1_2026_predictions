@@ -14,8 +14,8 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 
 | Race | Podium Predicted | Actual | Result |
 |------|-----------|------|--------|--------|
-| R1 Australia | LEC | HAM | RUS  | George Russell won by 2.9s | Correct |
-| R2 China | Lewis Hamilton | Kimi Antonelli won by 5.5s | Wrong winner, 3/3 podium match |
+| R1 Australia | 1.LEC/2.HAM/3.RUS  | 1.RUS/2.ANT/3.LEC | 2 drivers had won podium in different positions |
+| R2 China | 1.ANT/2.RUS/3.HAM | 1.ANT/2.RUS/3.HAM | 3/3 podium match |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
