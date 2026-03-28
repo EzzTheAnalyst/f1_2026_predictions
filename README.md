@@ -12,6 +12,10 @@ This repository contains an **XGBoost machine learning model** that predicts rac
 
 PS.: Over the season, I'll be adding additional features to improve our model as well
 
+| Race | Podium Predicted | Actual | Result |
+|------|-----------|------|--------|--------|
+| R1 Australia | LEC | HAM | RUS  | George Russell won by 2.9s | Correct |
+| R2 China | Lewis Hamilton | Kimi Antonelli won by 5.5s | Wrong winner, 3/3 podium match |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
