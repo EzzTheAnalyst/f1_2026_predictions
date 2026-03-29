@@ -16,7 +16,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 |------------|---------------------------|---------------------|---------------------------------|
 | R1 Australia | 1.LEC/2.HAM/3.RUS       | 1.RUS/2.ANT/3.LEC  | 2 drivers had podium in different positions |
 | R2 China   | 1.ANT/2.RUS/3.HAM        | 1.ANT/2.RUS/3.HAM  | 3/3 podium match                |
-| R3 Japan   | 1.ANT/2.RUS/3.PIA        | ?  | ?                |
+| R3 Japan   | 1.ANT/2.RUS/3.PIA        | 1.ANT/2.PIA/3.LEC  | 2 drivers had podium, one in exact position and the other in different                |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
