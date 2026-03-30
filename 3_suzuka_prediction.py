@@ -93,8 +93,10 @@ print(final_results[["Driver", "PredictedRacetime (s)"]])
 
 # sort results and get top 3
 podium = final_results.loc[:7, ["Driver", "PredictedRacetime (s)"]]
-print("\n🏁 Suzuka Race Prediction🏁")
-print("\n🏆 Predicted in the top 3 🏆")
+print("="*50)
+print("🏁 Suzuka Race Prediction🏁")
+print("="*50)
+print("\n🏆 Predicted in the top 3 🏆 \n")
 print(f"🥇 P1: {podium.iloc[0]['Driver']}")
 print(f"🥈 P2: {podium.iloc[1]['Driver']}")
 print(f"🥉 P3: {podium.iloc[2]['Driver']}")
@@ -103,9 +105,12 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 
 """
+==================================================
 🏁 Suzuka Race Prediction🏁
+==================================================
 
 🏆 Predicted in the top 3 🏆
+
 🥇 P1: ANT
 🥈 P2: RUS
 🥉 P3: PIA
