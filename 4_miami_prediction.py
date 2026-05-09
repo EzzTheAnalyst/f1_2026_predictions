@@ -69,7 +69,7 @@ date_of_race = "2026-05-03"                     # must follow YYYY-MM-DD
 weather_url = f"http://api.weatherapi.com/v1/history.json?key={API_KEY}&q={City}&dt={date_of_race}"
 response = requests.get(weather_url)
 weather_data = response.json()
-
+tempreature = weather_data["forecast"]["forecastday"][0]["day"]["avgtemp_c"]
 
 # rain probability
 race_time = "16:00"
@@ -137,6 +137,7 @@ print(final_results[["Driver", "PredictedRacetime (s)"]])
 
 
 # sort results and get top 3
+print(f"\n Tempreature expected in the race is {tempreature} C \n")
 podium = final_results.loc[:7, ["Driver", "PredictedRacetime (s)"]]
 print("="*50)
 print("🏁 Miami Race Prediction🏁")
