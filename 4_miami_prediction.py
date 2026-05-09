@@ -62,6 +62,44 @@ qualifying_2026 = pd.DataFrame({
 
 })
 
+# weather data
+API_KEY = ""
+City = "Miami"
+date_of_race = "2026-05-03"                     # must follow YYYY-MM-DD
+weather_url = f"http://api.weatherapi.com/v1/history.json?key={API_KEY}&q={City}&dt={date_of_race}"
+response = requests.get(weather_url)
+weather_data = response.json()
+
+
+# rain probability
+race_time = "16:00"
+try:
+    forecast_day = weather_data["forecast"]["forecastday"][0]
+
+    chance_of_rain = None
+
+    for hour in forecast_day["hour"]:
+        if hour["time"].endswith(f"{race_time}"):
+            chance_of_rain = hour["chance_of_rain"]
+except Exception as e:
+    print("Error", e)
+
+
+# rain laptime increase
+if chance_of_rain >= 25 and chance_of_rain <= 50:
+    wet_factor = 1.05
+elif chance_of_rain >= 50 and chance_of_rain <= 70:
+    wet_factor = 1.1
+else:
+    wet_factor = 1.2
+
+
+# chances of rain multiplier
+if chance_of_rain >= 0.70:
+    qualifying_2026["QualifyingTime (s)"] = qualifying_2026["QualifyingTime (s)"] * wet_factor
+else:
+    qualifying_2026["QualifyingTime (s)"]
+
 
 # merge fp with qualifying times
 merged_data = qualifying_2026.merge(df_fp, on="Driver", how="left")
@@ -88,7 +126,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_imputed, y, test_size=0.2,
 
 
 # train XGBoost model
-model = XGBRegressor(n_estimators=100, learning_rate=0.7, max_depth=3, random_state=42)
+model = XGBRegressor(n_estimators=100, learning_rate=0.5, max_depth=3, random_state=42)
 model.fit(X_train, y_train)
 merged_data["PredictedRacetime (s)"] = model.predict(X_imputed)
 
@@ -100,8 +138,10 @@ print(final_results[["Driver", "PredictedRacetime (s)"]])
 
 # sort results and get top 3
 podium = final_results.loc[:7, ["Driver", "PredictedRacetime (s)"]]
-print("\n🏁 Shanghai Race Prediction🏁")
-print("\n🏆 Predicted in the top 3 🏆")
+print("="*50)
+print("🏁 Miami Race Prediction🏁")
+print("="*50)
+print("\n🏆 Predicted in the top 3 🏆 \n")
 print(f"🥇 P1: {podium.iloc[0]['Driver']}")
 print(f"🥈 P2: {podium.iloc[1]['Driver']}")
 print(f"🥉 P3: {podium.iloc[2]['Driver']}")
@@ -111,19 +151,22 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 """
    Driver  PredictedRacetime (s)
-0     HUL              89.439445
-1     LEC              89.451599
-2     ANT              89.474953
-3     PIA              89.474953
-4     NOR              89.536560
+0     ANT              89.476257
+1     PIA              89.534370
+2     NOR              89.536476
+3     LEC              89.541084
+4     VER              89.557838
 
-🏁 Shanghai Race Prediction🏁
+==================================================
+🏁 Miami Race Prediction🏁
+==================================================
 
-🏆 Predicted in the top 3 🏆
-🥇 P1: HUL
-🥈 P2: LEC
-🥉 P3: ANT
-Model Error (MAE) : 0.21 seconds
+🏆 Predicted in the top 3 🏆 
+
+🥇 P1: ANT
+🥈 P2: PIA
+🥉 P3: NOR
+Model Error (MAE) : 0.57 seconds
 """
 
 
