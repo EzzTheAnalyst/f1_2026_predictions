@@ -30,6 +30,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 3. **Model Training**: A **XGBoosting Regressor** is trained using 2026 free practice, and sprint results.
 4. **Prediction**: The model predicts race times for 2026 and ranks drivers accordingly.
 5. **Evaluation**: Model performance is measured using **Mean Absolute Error (MAE)**.
+6. **Weather**: Prediction of how the weather is going to be like in case it rained or not in order to add wet multiplier factor**.
 
 
 ## ❓ FAQs
@@ -43,3 +44,4 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 - `pandas`
 - `scikit-learn`
 - `XGBoost`
+- `requests`
