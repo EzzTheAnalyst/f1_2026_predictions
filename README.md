@@ -14,11 +14,11 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 ## 🔮 Do the Predictions Actually Work?
 | Race       | Podium Predicted          | Actual              | Result                          |
 |------------|---------------------------|---------------------|---------------------------------|
-| Australia | 1.LEC/2.HAM/3.RUS       | 1.RUS/2.ANT/3.LEC  | 2/3 correct – 2 wrong position |
+| Australia | 1.LEC/2.HAM/3.RUS       | 1.RUS/2.ANT/3.LEC  | 2/3 correct – 2 wrong positions |
 | China   | 1.ANT/2.RUS/3.HAM        | 1.ANT/2.RUS/3.HAM  | 3/3 podium match |
-| Japan   | 1.ANT/2.RUS/3.PIA        | 1.ANT/2.PIA/3.LEC  | 2/3 correct – 2 wrong position |
+| Japan   | 1.ANT/2.RUS/3.PIA        | 1.ANT/2.PIA/3.LEC  | 2/3 correct – 2 wrong positions |
 | Miami   | 1.ANT/2.PIA/3.NOR        | 1.ANT/2.NOR/3.PIA  | 3/3 correct – 1 wrong position |
-| Montreal   | 1.ANT/2.RUS/3.HAM        | 1.ANT/2.HAM/3.VER  | 2/3 correct – 2 wrong position |
+| Montreal   | 1.ANT/2.RUS/3.HAM        | 1.ANT/2.HAM/3.VER  | 2/3 correct – 2 wrong positions |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
