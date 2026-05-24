@@ -54,11 +54,11 @@ qualifying_2026 = pd.DataFrame({
                 "BOR", "HUL", "BEA", "OCO","GAS",
                 "ALB", "SAI", "COL", "ALO", "PER",
                 "STR", "BOT"],
-"QualifyingTime (s)": [87.964, 88.319, 88.143, 88.789, 88.197,
-                87.798, 88.319, 88.500, 89.499, 90.133, 
-                91.967, 89.439, 89.567, 89.771, 88.81,
-                89.946, 88.762, 91.098, 91.967, 91.629,
-                91.164, 89.568]
+"QualifyingTime (s)": [72.907, 72.868, 72.976, 72.578, 72.646,
+                72.935, 72.729, 72.781, 73.897, 73.280, 
+                74.071, 73.886, 74.416, 74.845, 74.187,
+                74.851, 74.273, 73.697, 75.196, 75.429,
+                76.195, 76.272]
 
 })
 
@@ -141,7 +141,7 @@ print(final_results[["Driver", "PredictedRacetime (s)"]])
 # sort results and get top 3
 print(f"Tempreature predicted for the race is {tempreature} C \n")
 podium = final_results.loc[:7, ["Driver", "PredictedRacetime (s)"]]
-print("\n🏁 Shanghai Race Prediction🏁")
+print("\n🏁 Montreal Race Prediction🏁")
 print("\n🏆 Predicted in the top 3 🏆")
 print(f"🥇 P1: {podium.iloc[0]['Driver']}")
 print(f"🥈 P2: {podium.iloc[1]['Driver']}")
@@ -152,19 +152,19 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 """
    Driver  PredictedRacetime (s)
-0     HUL              89.439445
-1     LEC              89.451599
-2     ANT              89.474953
-3     PIA              89.474953
-4     NOR              89.536560
+0     ANT              73.366478
+1     RUS              73.447319
+2     HAM              73.766792
+3     NOR              73.850838
+4     COL              73.896751
 
 🏁 Montreal Race Prediction🏁
 
 🏆 Predicted in the top 3 🏆
-🥇 P1: HUL
-🥈 P2: LEC
-🥉 P3: ANT
-Model Error (MAE) : 0.21 seconds
+🥇 P1: ANT
+🥈 P2: RUS
+🥉 P3: HAM
+Model Error (MAE) : 0.39 seconds
 """
 
 
