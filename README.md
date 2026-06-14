@@ -19,6 +19,8 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 | Japan   | 1.ANT/2.RUS/3.PIA        | 1.ANT/2.PIA/3.LEC  | 2/3 correct – 2 wrong positions |
 | Miami   | 1.ANT/2.PIA/3.NOR        | 1.ANT/2.NOR/3.PIA  | 3/3 correct – 1 wrong position |
 | Montreal   | 1.ANT/2.RUS/3.HAM        | 1.ANT/2.HAM/3.VER  | 2/3 correct – 2 wrong positions |
+| Monaco   | 1.ANT/2.VER/3.HAM        | 1.ANT/2.HAM/3.HAD  | 2/3 correct – 2 wrong positions |
+| Barcelona   | 1.RUS/2.NOR/3.PIA        | 1.HAM/2.RUS/3.NOR  | 2/3 correct – 2 wrong positions |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
