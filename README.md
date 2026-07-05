@@ -22,6 +22,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 | Monaco   | 1.ANT/2.VER/3.HAM        | 1.ANT/2.HAM/3.HAD  | 2/3 correct – 2 wrong positions |
 | Barcelona   | 1.RUS/2.NOR/3.PIA        | 1.HAM/2.RUS/3.NOR  | 2/3 correct – 2 wrong positions |
 | Austria   | 1.RUS/2.LEC/3.HAM        | 1.RUS/2.VER/3.ANT  | 1/3 correct - 2 wrong positions |
+| Britain   | 1.ANT/2.HAM/3.LEC        | 1.LEC/2.RUS/3.HAM  | 2/3 correct - 2 wrong positions |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
