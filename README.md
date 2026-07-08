@@ -40,7 +40,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 
 ## ❓ FAQs
 - Why am I not using historical data from the past years?
-- > This year marks the first time a completely new car has been introduced due to the new regulations, making it significantly different from previous years.
+> This year marks the first time a completely new car has been introduced due to the new regulations, making it significantly different from previous years.
 
 
 ### Dependencies
