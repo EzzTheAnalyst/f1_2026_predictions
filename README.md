@@ -32,7 +32,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 ## 🔍 How It Works
 1. **Data Collection**: The script pulls relevant F1 data using the FastF1 API.
 2. **Preprocessing & Feature Engineering**: Converts lap times, normalizes driver names, and structures race data.
-3. **Model Training**: A **XGBoosting Regressor** is trained using 2026 free practice, and sprint results.
+3. **Model Training**: A **XGBoosting Regressor** is trained using 2026 free practice, sprint (if included in the weekend), and qualifying results.
 4. **Prediction**: The model predicts race times for 2026 and ranks drivers accordingly.
 5. **Evaluation**: Model performance is measured using **Mean Absolute Error (MAE)**.
 6. **Weather**: Prediction of how the weather is going to be like in case it rained or not in order to add wet multiplier factor.
