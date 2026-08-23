@@ -25,6 +25,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 | Britain   | 1.ANT/2.HAM/3.LEC        | 1.LEC/2.RUS/3.HAM  | 2/3 correct - 2 wrong positions |
 | Belgium   | 1.ANT/2.VER/3.NOR        | 1.ANT/2.LEC/3.VER  | 2/3 correct - 2 wrong positions |
 | Hungary   | 1.HAM/2.LEC/3.VER        | 1.NOR/2.VER/3.ANT  | 1/3 correct - 3 wrong positions |
+| Nehterlands   | 1.NOR/2.RUS/3.ANT        | 1.NOR/2.ANT/3.RUS  | 2/3 correct - 1 wrong positions |
 
 ## 📊 Data Sources
 - **FastF1 API**: Fetches lap time, and telemetry data.
