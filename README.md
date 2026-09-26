@@ -43,15 +43,18 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 6. **Weather**: Prediction of how the weather is going to be like in case it rained or not in order to add wet multiplier factor.
 
 
-## 🔍 Wanna give it a try?
+## Setup
 I use uv instead of pip, you can download it from [here](https://docs.astral.sh/uv/)
-```uv add fastf1 pandas numpy sklearn.model_selection xgboost sklearn.metrics sklearn.impute requests```
 
-For weather data create an account on weatherapi and put your api key in the designated place
+```bash
+uv add fastf1 pandas numpy sklearn.model_selection xgboost sklearn.metrics sklearn.impute requests
+```
 
-The script doesn't work unless there's a key
+For weather data create an account on weatherapi and put your api key in the designated place, as the script doesn't work unless there's a key
 
-```uv run .\1_melbourne_prediction.py```
+```bash
+uv run .\1_melbourne_prediction.py
+```
 
 ## ❓ FAQs
 - Why am I not using historical data from the past years?
