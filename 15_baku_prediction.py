@@ -185,11 +185,11 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 """
     Driver  PredictedRacetime (s)
-0     NOR              93.174042
-1     ANT              93.174042
-2     HAM              93.325661
-3     LEC              93.325661
-4     RUS              93.432777
+0     RUS             103.821327
+1     HAM             104.231949
+2     VER             104.397179
+3     LEC             104.542686
+4     PIA             104.842583
 
 
 ==================================================
@@ -198,8 +198,8 @@ print(f"Model Error (MAE) : {mean_absolute_error(y_test, y_pred):.2f} seconds")
 
 🏆 Predicted in the top 3 🏆 
 
-🥇 P1: NOR
-🥈 P2: ANT
-🥉 P3: HAM
-Model Error (MAE) : 0.60 seconds
+🥇 P1: RUS
+🥈 P2: HAM
+🥉 P3: VER
+Model Error (MAE) : 0.22 seconds
 """
