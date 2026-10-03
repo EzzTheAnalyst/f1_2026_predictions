@@ -51,7 +51,7 @@ I use uv instead of pip, you can download it from [here](https://docs.astral.sh/
 uv add fastf1 pandas numpy sklearn.model_selection xgboost sklearn.metrics sklearn.impute requests
 ```
 
-For weather data create an account on weatherapi and put your api key in the designated place, as the script doesn't work unless there's a key
+For weather data, Create an account on WeatherAPI and put your API key in the designated place, as the script doesn't work unless there's an API key
 
 ```bash
 uv run .\1_melbourne_prediction.py
