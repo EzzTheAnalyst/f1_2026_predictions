@@ -31,6 +31,7 @@ PS.: Over the season, I'll be adding additional features to improve our model as
 | Azerbaijan   | 1.RUS/2.HAM/3.VER        | 1.RUS/2.VER/3.HAD  | 2/3 correct - 2 wrong positions |
 | Malasyia   | 1.VER/2.ANT/3.LEC        | 1.VER/2.ANT/3.HAM  | 2/3 correct - 1 wrong position |
 | Singapore   | 1.VER/2.LEC/3.HAM        | 1.VER/2.LEC/3.ANT  | 2/3 correct - 1 wrong position |
+| Mexico   | 1.LEC/2.HAM/3.ANT        | 1.VER/2.HAM/3.ANT  | 2/3 correct - 1 wrong position |
 
 
 ## 📊 Data Sources
